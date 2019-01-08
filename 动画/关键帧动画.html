@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>走起来</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .move {
+      left: 1420px;
+      position: absolute;
+      height: 300px;
+      width: 180px;
+      animation-name:move;
+      animation-duration: 6s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    .play{
+      width: 180px;
+      height:300px;
+      background-image: url(./charector.png);
+      animation-name:play;
+      animation-duration: 1000ms;
+      animation-iteration-count: infinite;/* 动画无限播放 */
+      animation-timing-function:step-start;/* 马上跳到动画每一结束桢的状态 */
+      position: absolute;
+    }
+    @keyframes play{
+    0% {background-position: 0 0;}
+    14.3% {background-position: -180px 0;}
+    28.6% {background-position: -360px 0;}
+    42.9% {background-position: -540px 0;}
+    57.2% {background-position: -720px 0;}
+    71.5% {background-position: -900px 0;}
+    85.8% {background-position: -1080px 0;}
+    100% {background-position: 0 0;}
+}
+  @keyframes move {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-1366px);}
+  }
+  </style>
+</head>
+<body>
+  <div class="move">
+    <div class="play"></div>
+  </div>
+</body>
+</html>

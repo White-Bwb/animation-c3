@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      padding: 50px;
+    }
+
+    .steps {
+      width: 0;
+      height: 40px;
+      font-weight: normal;
+      font-size: 30px;
+      overflow: hidden;
+      transition: width 4s steps(10);
+    }
+
+    body:hover .steps {
+      width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="steps">前端黑马前端一期</div>
+</body>
+
+</html>
